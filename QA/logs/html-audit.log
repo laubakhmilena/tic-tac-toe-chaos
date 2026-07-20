@@ -1,0 +1,10 @@
+Elements with IDs: 49
+Duplicate IDs: 0
+Missing ARIA ID references: 1
+MISSING_ARIA_REF ('section', 'modal', 'aria-labelledby', 'modalTitle')
+Images in HTML: 29
+Images without alt attribute: 0
+Buttons in HTML: 31
+Buttons without explicit type: 0
+HTML language: ru
+Title: Крестики Нолики Хаос

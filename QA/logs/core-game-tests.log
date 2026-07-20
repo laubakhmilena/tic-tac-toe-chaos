@@ -1,0 +1,15 @@
+PASS classic game starts with an empty 3x3 board
+PASS all eight classic winning lines are recognized
+PASS non-winning classic board returns null
+PASS hard bot takes an immediate winning move
+PASS medium bot blocks an immediate player win
+PASS disappearing game initializes independent queues
+PASS strategic valid moves obey the active mini-board
+PASS valid strategic save passes validation and malformed save fails
+PASS infinite mode detects horizontal, vertical and diagonal lines of five
+PASS infinite candidates start at origin and never include occupied cells
+PASS infinite bot chooses its immediate winning move
+PASS infinite save is rejected after the 1200-move cap
+PASS strategic restore creates independent board arrays
+
+13/13 tests passed

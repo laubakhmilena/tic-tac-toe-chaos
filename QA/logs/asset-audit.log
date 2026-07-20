@@ -1,0 +1,15 @@
+Literal asset references found: 54
+Existing referenced files: 51
+Directory/dynamic prefixes: 2
+Missing literal references: 1
+MISSING assets/pet/cat-
+
+Image integrity:
+Images checked: 125
+Formats: {'PNG': 113, 'WEBP': 12}
+Total image bytes: 9903248
+Corrupt/unreadable images: 0
+Exact duplicate groups: 3
+DUPLICATE assets/modes/classic-board.png | assets/modes/classic.png | assets/modes/disappearing.png
+DUPLICATE assets/modes/infinite-grid.png | assets/modes/infinite.png
+DUPLICATE assets/modes/strategic-board.png | assets/modes/strategic.png

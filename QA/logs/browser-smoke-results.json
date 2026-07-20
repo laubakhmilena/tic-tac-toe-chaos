@@ -1,0 +1,202 @@
+[
+  {
+    "name": "desktop 1440x900: title",
+    "status": "PASS",
+    "details": "Крестики Нолики Хаос"
+  },
+  {
+    "name": "desktop 1440x900: app ready",
+    "status": "PASS",
+    "details": "true"
+  },
+  {
+    "name": "desktop 1440x900: home screen active",
+    "status": "PASS",
+    "details": "screen screen-home is-active"
+  },
+  {
+    "name": "desktop 1440x900: eight themes rendered",
+    "status": "PASS",
+    "details": "8"
+  },
+  {
+    "name": "desktop 1440x900: modes screen active",
+    "status": "PASS",
+    "details": "screen is-active"
+  },
+  {
+    "name": "desktop 1440x900: four modes available",
+    "status": "PASS",
+    "details": "4"
+  },
+  {
+    "name": "desktop 1440x900: friend mode hides difficulty",
+    "status": "PASS",
+    "details": "True"
+  },
+  {
+    "name": "desktop 1440x900: game screen active",
+    "status": "PASS",
+    "details": "screen game-screen is-active"
+  },
+  {
+    "name": "desktop 1440x900: classic board has nine cells",
+    "status": "PASS",
+    "details": "9"
+  },
+  {
+    "name": "desktop 1440x900: victory modal opens",
+    "status": "PASS",
+    "details": "Победа!\n\nИгрок ✕ собрал победную линию.\n\nПобеды\n1\nСерия\n0\nРекорд\n0\n\nДо темы «Солнце и Луна»\n\nМатчи: 1 из 3\n\nСледующий матч\nЗаново\nВ меню"
+  },
+  {
+    "name": "desktop 1440x900: victory text shown",
+    "status": "PASS",
+    "details": "Победа!\n\nИгрок ✕ собрал победную линию.\n\nПобеды\n1\nСерия\n0\nРекорд\n0\n\nДо темы «Солнце и Луна»\n\nМатчи: 1 из 3\n\nСледующий матч\nЗаново\nВ меню"
+  },
+  {
+    "name": "desktop 1440x900: in-memory statistics updated",
+    "status": "PASS",
+    "details": "1"
+  },
+  {
+    "name": "desktop 1440x900: real localStorage persistence",
+    "status": "BLOCKED",
+    "details": "Playwright test uses an opaque set_content origin because local/file/http navigation is blocked by the execution environment. Persistence is covered by the 19 Node tests with a storage mock."
+  },
+  {
+    "name": "desktop 1440x900: no horizontal document overflow",
+    "status": "PASS",
+    "details": "{\"sw\": 1440, \"cw\": 1440}"
+  },
+  {
+    "name": "desktop 1440x900: no page errors",
+    "status": "PASS",
+    "details": "[]"
+  },
+  {
+    "name": "desktop 1440x900: smoke sequence",
+    "status": "PASS",
+    "details": "Completed"
+  },
+  {
+    "name": "mobile 390x844: title",
+    "status": "PASS",
+    "details": "Крестики Нолики Хаос"
+  },
+  {
+    "name": "mobile 390x844: app ready",
+    "status": "PASS",
+    "details": "true"
+  },
+  {
+    "name": "mobile 390x844: home screen active",
+    "status": "PASS",
+    "details": "screen screen-home is-active"
+  },
+  {
+    "name": "mobile 390x844: eight themes rendered",
+    "status": "PASS",
+    "details": "8"
+  },
+  {
+    "name": "mobile 390x844: modes screen active",
+    "status": "PASS",
+    "details": "screen is-active"
+  },
+  {
+    "name": "mobile 390x844: four modes available",
+    "status": "PASS",
+    "details": "4"
+  },
+  {
+    "name": "mobile 390x844: friend mode hides difficulty",
+    "status": "PASS",
+    "details": "True"
+  },
+  {
+    "name": "mobile 390x844: game screen active",
+    "status": "PASS",
+    "details": "screen game-screen is-active"
+  },
+  {
+    "name": "mobile 390x844: classic board has nine cells",
+    "status": "PASS",
+    "details": "9"
+  },
+  {
+    "name": "mobile 390x844: victory modal opens",
+    "status": "PASS",
+    "details": "Победа!\n\nИгрок ✕ собрал победную линию.\n\nПобеды\n1\nСерия\n0\nРекорд\n0\n\nДо темы «Солнце и Луна»\n\nМатчи: 1 из 3\n\nСледующий матч\nЗаново\nВ меню"
+  },
+  {
+    "name": "mobile 390x844: victory text shown",
+    "status": "PASS",
+    "details": "Победа!\n\nИгрок ✕ собрал победную линию.\n\nПобеды\n1\nСерия\n0\nРекорд\n0\n\nДо темы «Солнце и Луна»\n\nМатчи: 1 из 3\n\nСледующий матч\nЗаново\nВ меню"
+  },
+  {
+    "name": "mobile 390x844: in-memory statistics updated",
+    "status": "PASS",
+    "details": "1"
+  },
+  {
+    "name": "mobile 390x844: real localStorage persistence",
+    "status": "BLOCKED",
+    "details": "Playwright test uses an opaque set_content origin because local/file/http navigation is blocked by the execution environment. Persistence is covered by the 19 Node tests with a storage mock."
+  },
+  {
+    "name": "mobile 390x844: no horizontal document overflow",
+    "status": "PASS",
+    "details": "{\"sw\": 390, \"cw\": 390}"
+  },
+  {
+    "name": "mobile 390x844: no page errors",
+    "status": "PASS",
+    "details": "[]"
+  },
+  {
+    "name": "mobile 390x844: smoke sequence",
+    "status": "PASS",
+    "details": "Completed"
+  },
+  {
+    "name": "mode classic: launches",
+    "status": "PASS",
+    "details": "9/9"
+  },
+  {
+    "name": "mode classic: no page errors",
+    "status": "PASS",
+    "details": "[]"
+  },
+  {
+    "name": "mode disappearing: launches",
+    "status": "PASS",
+    "details": "9/9"
+  },
+  {
+    "name": "mode disappearing: no page errors",
+    "status": "PASS",
+    "details": "[]"
+  },
+  {
+    "name": "mode strategic: launches",
+    "status": "PASS",
+    "details": "81/81"
+  },
+  {
+    "name": "mode strategic: no page errors",
+    "status": "PASS",
+    "details": "[]"
+  },
+  {
+    "name": "mode infinite: launches",
+    "status": "PASS",
+    "details": "1/1"
+  },
+  {
+    "name": "mode infinite: no page errors",
+    "status": "PASS",
+    "details": "[]"
+  }
+]

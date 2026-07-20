@@ -1,0 +1,108 @@
+PASS | desktop 1440x900: title | Крестики Нолики Хаос
+PASS | desktop 1440x900: app ready | true
+PASS | desktop 1440x900: home screen active | screen screen-home is-active
+PASS | desktop 1440x900: eight themes rendered | 8
+PASS | desktop 1440x900: modes screen active | screen is-active
+PASS | desktop 1440x900: four modes available | 4
+PASS | desktop 1440x900: friend mode hides difficulty | True
+PASS | desktop 1440x900: game screen active | screen game-screen is-active
+PASS | desktop 1440x900: classic board has nine cells | 9
+PASS | desktop 1440x900: victory modal opens | Победа!
+
+Игрок ✕ собрал победную линию.
+
+Победы
+1
+Серия
+0
+Рекорд
+0
+
+До темы «Солнце и Луна»
+
+Матчи: 1 из 3
+
+Следующий матч
+Заново
+В меню
+PASS | desktop 1440x900: victory text shown | Победа!
+
+Игрок ✕ собрал победную линию.
+
+Победы
+1
+Серия
+0
+Рекорд
+0
+
+До темы «Солнце и Луна»
+
+Матчи: 1 из 3
+
+Следующий матч
+Заново
+В меню
+PASS | desktop 1440x900: in-memory statistics updated | 1
+BLOCKED | desktop 1440x900: real localStorage persistence | Playwright test uses an opaque set_content origin because local/file/http navigation is blocked by the execution environment. Persistence is covered by the 19 Node tests with a storage mock.
+PASS | desktop 1440x900: no horizontal document overflow | {"sw": 1440, "cw": 1440}
+PASS | desktop 1440x900: no page errors | []
+PASS | desktop 1440x900: smoke sequence | Completed
+PASS | mobile 390x844: title | Крестики Нолики Хаос
+PASS | mobile 390x844: app ready | true
+PASS | mobile 390x844: home screen active | screen screen-home is-active
+PASS | mobile 390x844: eight themes rendered | 8
+PASS | mobile 390x844: modes screen active | screen is-active
+PASS | mobile 390x844: four modes available | 4
+PASS | mobile 390x844: friend mode hides difficulty | True
+PASS | mobile 390x844: game screen active | screen game-screen is-active
+PASS | mobile 390x844: classic board has nine cells | 9
+PASS | mobile 390x844: victory modal opens | Победа!
+
+Игрок ✕ собрал победную линию.
+
+Победы
+1
+Серия
+0
+Рекорд
+0
+
+До темы «Солнце и Луна»
+
+Матчи: 1 из 3
+
+Следующий матч
+Заново
+В меню
+PASS | mobile 390x844: victory text shown | Победа!
+
+Игрок ✕ собрал победную линию.
+
+Победы
+1
+Серия
+0
+Рекорд
+0
+
+До темы «Солнце и Луна»
+
+Матчи: 1 из 3
+
+Следующий матч
+Заново
+В меню
+PASS | mobile 390x844: in-memory statistics updated | 1
+BLOCKED | mobile 390x844: real localStorage persistence | Playwright test uses an opaque set_content origin because local/file/http navigation is blocked by the execution environment. Persistence is covered by the 19 Node tests with a storage mock.
+PASS | mobile 390x844: no horizontal document overflow | {"sw": 390, "cw": 390}
+PASS | mobile 390x844: no page errors | []
+PASS | mobile 390x844: smoke sequence | Completed
+PASS | mode classic: launches | 9/9
+PASS | mode classic: no page errors | []
+PASS | mode disappearing: launches | 9/9
+PASS | mode disappearing: no page errors | []
+PASS | mode strategic: launches | 81/81
+PASS | mode strategic: no page errors | []
+PASS | mode infinite: launches | 1/1
+PASS | mode infinite: no page errors | []

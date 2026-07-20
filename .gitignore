@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+
+# Local tooling and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Operating system files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Temporary and generated files
+*.tmp
+*.temp
+*.bak
+*.log
+coverage/
+dist/
+
+# Local test artifacts
+playwright-report/
+test-results/
+
+# Keep committed QA evidence logs
+!QA/logs/*.log

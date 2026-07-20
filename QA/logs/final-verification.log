@@ -1,0 +1,58 @@
+
+> tic-tac-toe-chaos@1.0.0 verify
+> npm run check:syntax && npm test && npm run check:project
+
+
+> tic-tac-toe-chaos@1.0.0 check:syntax
+> node --check script.js && node --check tests/pet-and-save.test.js && node --check tests/core-game.test.js && node --check scripts/verify-project.js
+
+
+> tic-tac-toe-chaos@1.0.0 test
+> node tests/pet-and-save.test.js && node tests/core-game.test.js
+
+PASS new save opens only Classic
+PASS existing unlocked themes survive migration
+PASS invalid selected theme migrates to Classic
+PASS old saves receive safe pet defaults
+PASS theme achievement thresholds are correct
+PASS match rewards map to 3, 2, 1 and friend 1
+PASS loss never reduces friendship and sets supportive mood
+PASS friend match grants exactly one paw
+PASS ten paws increase level and create a chest
+PASS chests unlock sequential accessories without duplicates
+PASS completed accessory sequence yields treat and two paws
+PASS feeding consumes food and adds its paws
+PASS only first petting in a session grants a paw
+PASS daily gift is granted once per date
+PASS daily quest persists on same date
+PASS daily quest reward is paid once
+PASS rewarded ad error gives no reward
+PASS rewarded ads stop after three rewards
+PASS infinite camera and zoom survive save restoration
+
+19/19 tests passed
+PASS classic game starts with an empty 3x3 board
+PASS all eight classic winning lines are recognized
+PASS non-winning classic board returns null
+PASS hard bot takes an immediate winning move
+PASS medium bot blocks an immediate player win
+PASS disappearing game initializes independent queues
+PASS strategic valid moves obey the active mini-board
+PASS valid strategic save passes validation and malformed save fails
+PASS infinite mode detects horizontal, vertical and diagonal lines of five
+PASS infinite candidates start at origin and never include occupied cells
+PASS infinite bot chooses its immediate winning move
+PASS infinite save is rejected after the 1200-move cap
+PASS strategic restore creates independent board arrays
+
+13/13 tests passed
+
+> tic-tac-toe-chaos@1.0.0 check:project
+> node scripts/verify-project.js
+
+PASS required project files: 6
+PASS referenced static assets: 51
+PASS unique HTML IDs: 49
+PASS normalized repository paths
+
+Project structure verification passed

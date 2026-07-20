@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#806fff">
+  <meta name="description" content="Крестики Нолики Хаос — четыре режима любимой игры: классический, стратегический, бесконечный и исчезающий.">
+  <title>Крестики Нолики Хаос</title>
+  <link rel="icon" href="assets/icons/star.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app" id="app">
+    <div class="sky-decor" aria-hidden="true">
+      <img class="cloud cloud-left" src="assets/effects/cloud-left.png" alt="">
+      <img class="cloud cloud-right" src="assets/effects/cloud-right.png" alt="">
+      <span class="spark spark-a">✦</span><span class="spark spark-b">✦</span><span class="spark spark-c">✦</span>
+    </div>
+
+    <section class="screen screen-home is-active" id="homeScreen" aria-labelledby="gameLogo">
+      <button class="icon-btn settings-btn" type="button" data-action="settings" aria-label="Настройки">
+        <img src="assets/icons/settings.png" alt="">
+      </button>
+      <div class="home-inner">
+        <p class="mini-label">Выберите тему</p>
+        <div class="theme-carousel" id="themeCarousel" aria-label="Темы игры"></div>
+        <div class="logo" id="gameLogo" aria-label="Крестики Нолики Хаос">
+          <span class="logo-top">Крестики</span>
+          <span class="logo-mid">Нолики</span>
+          <span class="logo-chaos">ХАОС</span>
+        </div>
+        <button class="primary-btn play-btn" id="playBtn" type="button">
+          <img src="assets/icons/play.png" alt=""><span>Играть</span>
+        </button>
+        <button class="pet-home-card" id="petHomeButton" type="button" data-nav="pet" aria-label="Открыть экран Кошечки Хаос">
+          <img id="petHomeImage" src="assets/pet/cat-normal.png" alt="Кошечка Хаос">
+          <span><b>Кошечка Хаос</b><small id="petHomeGift">До подарка: 10 лапок</small></span>
+        </button>
+        <p class="mode-count"><span aria-hidden="true">●</span> 4 игровых режима</p>
+      </div>
+    </section>
+
+    <section class="screen" id="modesScreen" aria-labelledby="modesTitle">
+      <header class="topbar screen-header">
+        <button class="icon-btn" type="button" data-nav="home" aria-label="Назад"><img src="assets/icons/back.png" alt=""></button>
+        <div class="selected-theme-chip" id="modeThemeChip"></div>
+        <button class="icon-btn" type="button" data-action="settings" aria-label="Настройки"><img src="assets/icons/settings.png" alt=""></button>
+      </header>
+      <div class="screen-content mode-content">
+        <p class="mini-label">Крестики Нолики Хаос</p>
+        <h1 class="screen-title" id="modesTitle">Выберите режим</h1>
+        <div class="mode-grid" id="modeGrid">
+          <article class="mode-card mode-classic">
+            <button class="mode-card__button" type="button" data-mode="classic">
+              <img class="mode-card__image" src="assets/modes/classic-mode.webp" alt="Классическое поле 3 на 3 с победной линией">
+              <span class="mode-card__content"><span class="mode-card__title">Классические</span><span class="mode-card__description">Соберите 3 в ряд</span></span>
+            </button>
+          </article>
+          <article class="mode-card mode-strategic">
+            <button class="mode-card__button" type="button" data-mode="strategic">
+              <img class="mode-card__image" src="assets/modes/strategic-mode.webp" alt="Стратегическое поле из девяти связанных малых полей">
+              <span class="mode-card__content"><span class="mode-card__title">Стратегические</span><span class="mode-card__description">Побеждайте на малых полях</span></span>
+            </button>
+          </article>
+          <article class="mode-card mode-infinite">
+            <button class="mode-card__button" type="button" data-mode="infinite">
+              <img class="mode-card__image" src="assets/modes/infinite-mode.webp" alt="Большое поле с подсвеченной линией из пяти знаков">
+              <span class="mode-card__content"><span class="mode-card__title">Бесконечные</span><span class="mode-card__description">Соберите 5 подряд</span></span>
+            </button>
+          </article>
+          <article class="mode-card mode-disappearing">
+            <button class="mode-card__button" type="button" data-mode="disappearing">
+              <img class="mode-card__image" src="assets/modes/disappearing-mode.webp" alt="Поле с растворяющимся старым знаком">
+              <span class="mode-card__content"><span class="mode-card__title">Исчезающие</span><span class="mode-card__description">Четвёртый знак удаляет первый</span></span>
+            </button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen pet-screen" id="petScreen" aria-labelledby="petTitle">
+      <header class="topbar screen-header">
+        <button class="icon-btn" type="button" data-nav="home" aria-label="Назад"><img src="assets/icons/back.png" alt=""></button>
+        <div class="pet-heading"><p class="mini-label">Постоянный питомец</p><h1 id="petTitle">Кошечка Хаос</h1></div>
+        <button class="icon-btn" type="button" data-action="settings" aria-label="Настройки"><img src="assets/icons/settings.png" alt=""></button>
+      </header>
+      <div class="pet-content">
+        <div class="pet-stage" aria-live="polite">
+          <div class="pet-heart" id="petHeart" aria-hidden="true">♥</div>
+          <img class="pet-character" id="petCharacter" src="assets/pet/cat-normal.png" alt="Кошечка Хаос">
+          <img class="pet-accessory-preview" id="petAccessoryPreview" src="" alt="" hidden>
+          <p class="pet-reaction" id="petReaction">Я всегда рядом!</p>
+        </div>
+        <div class="pet-dashboard">
+          <section class="pet-panel pet-progress-panel" aria-label="Дружба">
+            <div class="pet-level"><b id="petLevel">Уровень дружбы: 1</b><span id="petPointsLabel">Лапки: 0 из 10</span></div>
+            <div class="progress-bar pet-progress"><span id="petProgressBar"></span></div>
+            <button class="pet-chest" id="petChestButton" type="button" data-pet-action="chest" disabled>
+              <img id="petChestImage" src="assets/pet/chest-closed.png" alt=""><span id="petChestLabel">Сундук заботы пока не готов</span>
+            </button>
+          </section>
+          <section class="pet-panel">
+            <h2>Задание дня</h2>
+            <p id="petQuestText"></p>
+            <div class="progress-bar"><span id="petQuestProgress"></span></div>
+            <small id="petQuestLabel"></small>
+          </section>
+          <section class="pet-panel">
+            <h2>Угощения</h2>
+            <div class="pet-food-grid" id="petFoodGrid"></div>
+            <div class="pet-actions">
+              <button class="primary-btn pet-action-btn" type="button" data-pet-action="feed">Покормить</button>
+              <button class="secondary-btn pet-action-btn" type="button" data-pet-action="pet">Погладить</button>
+            </div>
+            <button class="secondary-btn pet-rewarded" id="petRewardedButton" type="button" data-pet-action="rewarded" hidden>Получить печенье: +2 лапки</button>
+          </section>
+          <section class="pet-panel">
+            <h2>Аксессуары</h2>
+            <div class="pet-accessories" id="petAccessories"></div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen" id="setupScreen" aria-labelledby="setupTitle">
+      <header class="topbar screen-header">
+        <button class="icon-btn" type="button" data-nav="modes" aria-label="Назад"><img src="assets/icons/back.png" alt=""></button>
+        <div class="selected-theme-chip" id="setupThemeChip"></div>
+        <button class="icon-btn" type="button" data-action="settings" aria-label="Настройки"><img src="assets/icons/settings.png" alt=""></button>
+      </header>
+      <div class="screen-content setup-content">
+        <img class="setup-art" id="setupArt" src="assets/modes/classic.png" alt="">
+        <h1 id="setupTitle">Классические</h1>
+        <p class="setup-description" id="setupDescription"></p>
+        <fieldset class="choice-group">
+          <legend>Соперник</legend>
+          <button class="choice-card is-selected" type="button" data-opponent="bot">
+            <img src="assets/icons/bot.png" alt=""><span><b>Против компьютера</b><small>Три уровня сложности</small></span>
+          </button>
+          <button class="choice-card" type="button" data-opponent="friend">
+            <img src="assets/icons/players.png" alt=""><span><b>С другом</b><small>На одном устройстве</small></span>
+          </button>
+        </fieldset>
+        <fieldset class="difficulty-group" id="difficultyGroup">
+          <legend>Сложность</legend>
+          <div class="segmented">
+            <button type="button" data-difficulty="easy">Легко</button>
+            <button class="is-selected" type="button" data-difficulty="medium">Средне</button>
+            <button type="button" data-difficulty="hard">Сложно</button>
+          </div>
+        </fieldset>
+        <button class="primary-btn start-match-btn" id="startMatchBtn" type="button">Начать</button>
+      </div>
+    </section>
+
+    <section class="screen game-screen" id="gameScreen" aria-labelledby="gameTitle">
+      <header class="topbar game-topbar screen-header">
+        <button class="icon-btn" type="button" data-action="leave-game" aria-label="Назад"><img src="assets/icons/back.png" alt=""></button>
+        <div class="game-heading"><h1 id="gameTitle">Классические</h1><div class="turn-chip" id="turnChip" aria-live="polite"></div></div>
+        <button class="icon-btn" type="button" data-action="settings" aria-label="Настройки"><img src="assets/icons/settings.png" alt=""></button>
+      </header>
+      <div class="game-body">
+        <div class="score-strip" id="scoreStrip"></div>
+        <p class="mode-hint" id="modeHint"></p>
+        <div class="board-shell" id="boardShell">
+          <div id="boardHost"></div>
+          <canvas id="infiniteCanvas" aria-label="Бесконечное поле крестиков-ноликов"></canvas>
+        </div>
+        <div class="canvas-tools" id="canvasTools" aria-label="Управление бесконечным полем">
+          <button class="icon-btn" type="button" data-canvas="zoom-in" aria-label="Увеличить"><img src="assets/icons/zoom-in.png" alt=""></button>
+          <button class="icon-btn" type="button" data-canvas="zoom-out" aria-label="Уменьшить"><img src="assets/icons/zoom-out.png" alt=""></button>
+          <button class="icon-btn" type="button" data-canvas="center" aria-label="К последнему ходу"><img src="assets/icons/center.png" alt=""></button>
+        </div>
+        <div class="game-actions">
+          <button class="secondary-btn" type="button" data-action="restart"><img src="assets/icons/restart.png" alt="">Заново</button>
+          <button class="secondary-btn" type="button" data-action="rules"><img src="assets/icons/tip.png" alt="">Правила</button>
+          <button class="secondary-btn" type="button" data-action="menu"><img src="assets/icons/home.png" alt="">Меню</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="modal-layer" id="modalLayer" aria-hidden="true">
+    <div class="modal-backdrop" data-action="modal-backdrop"></div>
+    <section class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"></section>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
