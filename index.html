@@ -21,9 +21,10 @@
       <button class="icon-btn settings-btn" type="button" data-action="settings" aria-label="Настройки">
         <img src="assets/icons/settings.png" alt="">
       </button>
+      <button class="secondary-btn home-themes-btn" type="button" data-action="themes" aria-label="Открыть темы">
+        <img src="assets/icons/sparkles.png" alt=""><span>Темы</span>
+      </button>
       <div class="home-inner">
-        <p class="mini-label">Выберите тему</p>
-        <div class="theme-carousel" id="themeCarousel" aria-label="Темы игры"></div>
         <div class="logo" id="gameLogo" aria-label="Крестики Нолики Хаос">
           <span class="logo-top">Крестики</span>
           <span class="logo-mid">Нолики</span>
@@ -36,7 +37,6 @@
           <img id="petHomeImage" src="assets/pet/cat-normal.png" alt="Кошечка Хаос">
           <span><b>Кошечка Хаос</b><small id="petHomeGift">До подарка: 10 лапок</small></span>
         </button>
-        <p class="mode-count"><span aria-hidden="true">●</span> 4 игровых режима</p>
       </div>
     </section>
 
@@ -87,14 +87,19 @@
       <div class="pet-content">
         <div class="pet-stage" aria-live="polite">
           <div class="pet-heart" id="petHeart" aria-hidden="true">♥</div>
-          <img class="pet-character" id="petCharacter" src="assets/pet/cat-normal.png" alt="Кошечка Хаос">
-          <img class="pet-accessory-preview" id="petAccessoryPreview" src="" alt="" hidden>
+          <div class="pet-figure" id="petFigure" data-mood="normal">
+            <img class="pet-character" id="petCharacter" src="assets/pet/cat-normal.png" alt="Кошечка Хаос">
+          </div>
           <p class="pet-reaction" id="petReaction">Я всегда рядом!</p>
         </div>
         <div class="pet-dashboard">
           <section class="pet-panel pet-progress-panel" aria-label="Дружба">
             <div class="pet-level"><b id="petLevel">Уровень дружбы: 1</b><span id="petPointsLabel">Лапки: 0 из 10</span></div>
             <div class="progress-bar pet-progress"><span id="petProgressBar"></span></div>
+            <div class="pet-vitals" aria-label="Состояние питомца">
+              <div class="pet-vital"><div><span>Сытость</span><b id="petHungerLabel">80 из 100</b></div><div class="progress-bar pet-vital-bar"><span id="petHungerBar"></span></div></div>
+              <div class="pet-vital"><div><span>Настроение</span><b id="petMoodLabel">75 из 100</b></div><div class="progress-bar pet-vital-bar"><span id="petMoodBar"></span></div></div>
+            </div>
             <button class="pet-chest" id="petChestButton" type="button" data-pet-action="chest" disabled>
               <img id="petChestImage" src="assets/pet/chest-closed.png" alt=""><span id="petChestLabel">Сундук заботы пока не готов</span>
             </button>
@@ -104,20 +109,24 @@
             <p id="petQuestText"></p>
             <div class="progress-bar"><span id="petQuestProgress"></span></div>
             <small id="petQuestLabel"></small>
+            <button class="secondary-btn pet-daily-game-btn" id="petDailyGameButton" type="button" data-pet-action="puzzle" aria-label="Игра дня">
+              <span>Игра дня</span><small id="petDailyGameStatus">Награда доступна</small>
+            </button>
           </section>
           <section class="pet-panel">
             <h2>Угощения</h2>
             <div class="pet-food-grid" id="petFoodGrid"></div>
             <div class="pet-actions">
-              <button class="primary-btn pet-action-btn" type="button" data-pet-action="feed">Покормить</button>
+              <button class="primary-btn pet-action-btn" id="petFeedButton" type="button" data-pet-action="feed">Покормить</button>
               <button class="secondary-btn pet-action-btn" type="button" data-pet-action="pet">Погладить</button>
             </div>
-            <button class="secondary-btn pet-rewarded" id="petRewardedButton" type="button" data-pet-action="rewarded" hidden>Получить печенье: +2 лапки</button>
+             <button class="secondary-btn pet-rewarded" id="petRewardedButton" type="button" data-pet-action="rewarded" hidden>Посмотреть рекламу — получить печенье и +2 лапки</button>
           </section>
-          <section class="pet-panel">
-            <h2>Аксессуары</h2>
-            <div class="pet-accessories" id="petAccessories"></div>
-          </section>
+      <section class="pet-panel">
+        <h2>Настроения</h2>
+        <div class="pet-mood-preview" id="petMoodPreview" aria-live="polite" aria-label="Выбранное настроение"></div>
+        <div class="pet-moods" id="petMoods"></div>
+      </section>
         </div>
       </div>
     </section>
@@ -149,7 +158,7 @@
             <button type="button" data-difficulty="hard">Сложно</button>
           </div>
         </fieldset>
-        <button class="primary-btn start-match-btn" id="startMatchBtn" type="button">Начать</button>
+        <button class="primary-btn start-match-btn" id="startMatchBtn" type="button" aria-label="Начать">Начать</button>
       </div>
     </section>
 
@@ -164,7 +173,7 @@
         <p class="mode-hint" id="modeHint"></p>
         <div class="board-shell" id="boardShell">
           <div id="boardHost"></div>
-          <canvas id="infiniteCanvas" aria-label="Бесконечное поле крестиков-ноликов"></canvas>
+          <canvas id="infiniteCanvas" tabindex="0" role="application" aria-label="Бесконечное поле крестиков-ноликов. Стрелками выберите клетку, Enter или пробел поставьте знак"></canvas>
         </div>
         <div class="canvas-tools" id="canvasTools" aria-label="Управление бесконечным полем">
           <button class="icon-btn" type="button" data-canvas="zoom-in" aria-label="Увеличить"><img src="assets/icons/zoom-in.png" alt=""></button>
